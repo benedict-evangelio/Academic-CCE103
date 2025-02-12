@@ -24,7 +24,7 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
-public class Peralta {
+public class LocallyLinked {
 	
 	public static Color primaryColor = new Color(224, 119, 0);
 	public static Color textColor = new Color(85, 85, 85);
@@ -36,7 +36,6 @@ public class Peralta {
 	public static Font brandFont = new Font("Arial", Font.BOLD, 25);
 	public static Font taglineFont = new Font("Arial", Font.BOLD, 20);
 	
-	public static String usersFilePath = "users.txt";
 	public static String residentsFilePath = "residents_record.txt";
 	public static String dataBreaker = ":";
 	
@@ -53,12 +52,7 @@ public class Peralta {
 	}
 	
 	public static void onCheckFile() throws IOException {
-		File usersFile = new File(usersFilePath);
 		File recordsFile = new File(residentsFilePath);
-		
-		if(!usersFile.exists()) {
-			usersFile.createNewFile();
-		}
 		
 		if(!recordsFile.exists()) {
 			recordsFile.createNewFile();
